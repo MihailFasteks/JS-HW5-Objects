@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Car(manufacter, model, year, midV,S){
+            this.manufacter=manufacter;
+            this.model=model;
+            this.year=year;
+            this.midV=midV;
+
+            this.showCar=function(){
+                document.write("Manufacter: "+this.manufacter+"<br />");
+                document.write("Model: "+this.model+"<br />");
+                document.write("Year: "+this.year+"<br />");
+                document.write("MidV: "+this.midV+"<br />");
+            };
+            this.tForMidV=function(){
+                let tWithoutBreaks=S/this.midV;
+                let count=tWithoutBreaks/4;
+                let timeForBreak=Math.floor(count);
+                let time=tWithoutBreaks+timeForBreak;
+                document.write("Time in way: "+time+" hours");
+        }
+    }
+    let car1=new Car("Audi", "Q7", 2020, 40, 360);
+    car1.showCar();
+    car1.tForMidV();
+    </script>
+</body>
+</html>
